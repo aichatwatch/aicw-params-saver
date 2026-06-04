@@ -36,13 +36,14 @@ export default [
       file: 'dist/aicw-params-saver.min.js',
       format: 'umd',
       name: 'ParamsSaver',
-      sourcemap: true,
+      sourcemap: false,
       exports: 'named',
     },
     plugins: [
       typescript({
         tsconfig: './tsconfig.json',
         declaration: false,
+        sourceMap: false,
       }),
       production &&
         terser({
