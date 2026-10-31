@@ -4,10 +4,10 @@ This script captures `utm_` params with values and adds them to internal links o
 
 **Example:**
 
-- User visits this page: [www.aicw.io?utm_source=github](https://www.aicw.io?utm_source=github)
+- User visits this page: [aichatwatch.com?utm_source=github](https://aichatwatch.com?utm_source=github)
 - Script automatically adds this `utm_source=github` param with value to all internal links on the page
-- So link like `/aicw-summarize` becomes `/aicw-summarize?utm_source=github`
-- Visitor clicks on this link [www.aicw.io/aicw-summarize?utm_source=github](www.aicw.io/aicw-summarize?utm_source=github)
+- So link like `/summarize-widget/` becomes `/summarize-widget/?utm_source=github`
+- Visitor clicks on this link [aichatwatch.com/summarize-widget/?utm_source=github](https://aichatwatch.com/summarize-widget/?utm_source=github)
 - Until script is used on all pages, this `utm_source=github` will be preserved for visitor during the whole journey over your website
 
 # Short Video Demo
@@ -19,7 +19,7 @@ This script captures `utm_` params with values and adds them to internal links o
 Add this to your HTML:
 
 ```html
-<script src="https://cdn.jsdelivr.net/gh/aicw-io/aicw-params-saver@latest/dist/aicw-params-saver.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/aichatwatch/aicw-params-saver@latest/dist/aicw-params-saver.min.js"></script>
 ```
 
 That's it. This automatically:
@@ -30,7 +30,7 @@ That's it. This automatically:
 To pin to a specific release (recommended for production):
 
 ```html
-<script src="https://cdn.jsdelivr.net/gh/aicw-io/aicw-params-saver@1.0.0/dist/aicw-params-saver.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/aichatwatch/aicw-params-saver@v20260604.130536/dist/aicw-params-saver.min.js"></script>
 ```
 
 ## What It Captures (Defaults)
@@ -55,7 +55,7 @@ Override defaults with data attributes on the script tag:
 
 ```html
 <script
-  src="https://cdn.jsdelivr.net/gh/aicw-io/aicw-params-saver@latest/dist/aicw-params-saver.min.js"
+  src="https://cdn.jsdelivr.net/gh/aichatwatch/aicw-params-saver@latest/dist/aicw-params-saver.min.js"
   data-params="utm_,gclid,custom_"
   data-storage="localStorage"
   data-merge-params="true"
@@ -184,13 +184,13 @@ No extra configuration needed.
 ### Minimal (all defaults)
 
 ```html
-<script src="https://cdn.jsdelivr.net/gh/aicw-io/aicw-params-saver@latest/dist/aicw-params-saver.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/aichatwatch/aicw-params-saver@latest/dist/aicw-params-saver.min.js"></script>
 ```
 
 ### Custom parameters + attribution journey
 
 ```html
-<script src="https://cdn.jsdelivr.net/gh/aicw-io/aicw-params-saver@latest/dist/aicw-params-saver.min.js"
+<script src="https://cdn.jsdelivr.net/gh/aichatwatch/aicw-params-saver@latest/dist/aicw-params-saver.min.js"
   data-params="utm_,gclid,fbclid,ref,campaign_id"
   data-merge-params="true"
 ></script>
@@ -199,7 +199,7 @@ No extra configuration needed.
 ### Multi-domain with cookie storage
 
 ```html
-<script src="https://cdn.jsdelivr.net/gh/aicw-io/aicw-params-saver@latest/dist/aicw-params-saver.min.js"
+<script src="https://cdn.jsdelivr.net/gh/aichatwatch/aicw-params-saver@latest/dist/aicw-params-saver.min.js"
   data-storage="cookie|localStorage"
   data-allowed-domains=".example.com,partner.com"
 ></script>
@@ -208,7 +208,7 @@ No extra configuration needed.
 ### Debug mode with custom excludes
 
 ```html
-<script src="https://cdn.jsdelivr.net/gh/aicw-io/aicw-params-saver@latest/dist/aicw-params-saver.min.js"
+<script src="https://cdn.jsdelivr.net/gh/aichatwatch/aicw-params-saver@latest/dist/aicw-params-saver.min.js"
   data-debug="true"
   data-exclude-patterns="*.pdf,*logout*,*admin*,*.zip"
 ></script>
@@ -219,7 +219,7 @@ No extra configuration needed.
 If you prefer to self-host instead of using the CDN:
 
 ```bash
-git clone https://github.com/aicw-io/aicw-params-saver.git
+git clone https://github.com/aichatwatch/aicw-params-saver.git
 cd aicw-params-saver
 npm install
 npm run build
@@ -265,10 +265,10 @@ window.addEventListener("mouseover", event => {
 });
 ```
 
-- in the same browser window open website with aicw params saver installed, use url with utm param added, for example: https://aicw.io?utm_campaign=github-aicw-params-saver
+- in the same browser window open website with aicw params saver installed, use url with utm param added, for example: https://aichatwatch.com?utm_campaign=github-aicw-params-saver
 - move mouse over other links on the web page to see these links now all have `utm_campaign=github-aicw-params-saver` param and value added
 
 
 ## License
 
-MIT - made by Eugene Mironichev [AICW.io](https://www.aicw.io)
+MIT - made by Eugene Mironichev [AI Chat Watch](https://aichatwatch.com)
