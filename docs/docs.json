@@ -1,0 +1,81 @@
+{
+  "$schema": "https://mintlify.com/docs.json",
+  "name": "AICW Params Saver",
+  "description": "AICW Params Saver is a small script that saves utm_ and click ID parameters from the first page and adds them to internal links.",
+  "favicon": "/favicon.svg",
+  "colors": {
+    "primary": "#667eea"
+  },
+  "navbar": {
+    "links": [
+      {
+        "label": "GitHub",
+        "href": "https://github.com/aichatwatch/aicw-params-saver"
+      },
+      {
+        "label": "Project page",
+        "href": "https://aichatwatch.com/params-saver/"
+      }
+    ],
+    "primary": {
+      "type": "button",
+      "label": "Install",
+      "href": "/installation"
+    }
+  },
+  "contextual": {
+    "options": ["copy", "view", "chatgpt", "claude", "mcp"]
+  },
+  "navigation": {
+    "groups": [
+      {
+        "group": "Get started",
+        "pages": ["index", "quickstart", "installation"]
+      },
+      {
+        "group": "Guides",
+        "pages": [
+          "what-it-captures",
+          "link-decoration",
+          "attribution-modes",
+          "storage-and-privacy",
+          "spa-support",
+          "examples"
+        ]
+      },
+      {
+        "group": "Reference",
+        "pages": ["configuration", "javascript-api"]
+      },
+      {
+        "group": "Help",
+        "pages": ["troubleshooting", "contributing"]
+      }
+    ]
+  },
+  "footer": {
+    "socials": {
+      "github": "https://github.com/aichatwatch"
+    },
+    "links": [
+      {
+        "header": "AI Chat Watch",
+        "items": [
+          {
+            "label": "AI Chat Watch (AICW)",
+            "href": "https://aichatwatch.com"
+          }
+        ]
+      },
+      {
+        "header": "Legal",
+        "items": [
+          {
+            "label": "Privacy",
+            "href": "https://aichatwatch.com/privacy/"
+          }
+        ]
+      }
+    ]
+  }
+}

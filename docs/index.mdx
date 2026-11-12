@@ -1,0 +1,43 @@
+---
+title: AICW Params Saver
+description: A small script that saves utm_ and click ID parameters from the first page and adds them to internal links.
+---
+
+AICW Params Saver is a small JavaScript file. It has no dependencies. It keeps the marketing parameters of a visit, so you can still see where a visitor came from after the visitor clicks to another page.
+
+A UTM parameter is a query parameter that starts with `utm_`, for example `utm_source=github`. A click ID is a parameter that an ad network adds to a link, for example `gclid`. Attribution means to link a visit or a sale to the source that caused it.
+
+## The problem
+
+A visitor opens `https://example.com/?utm_source=github`. The visitor then clicks a link to `/pricing`. The new URL has no `utm_` parameter. Your analytics tool now does not know the source.
+
+## What the script does
+
+1. It reads the URL of the first page and finds the parameters that you want to keep.
+2. It saves them in the browser of the visitor. By default it uses localStorage, a browser store that works without cookies.
+3. It adds the saved parameters to the internal links on the page.
+
+If the visitor clicks an internal link, the next page gets the same parameters. If you add the script to all pages, the source stays with the visitor for the whole visit.
+
+<img src="/imgs/aicw-params-saver.gif" alt="Short demo of AICW Params Saver adding a utm_ parameter to links" />
+
+## Start here
+
+<CardGroup cols={2}>
+  <Card title="Quickstart" href="/quickstart">
+    Add one script tag and check that it works.
+  </Card>
+  <Card title="Installation" href="/installation">
+    Use the CDN, pin a release tag, or host the file yourself.
+  </Card>
+  <Card title="Configuration" href="/configuration">
+    See every data attribute and its default.
+  </Card>
+  <Card title="JavaScript API" href="/javascript-api">
+    Read the saved parameters from your own code.
+  </Card>
+</CardGroup>
+
+## License
+
+The project uses the MIT license. AI Chat Watch (AICW) makes it. The source code is on [GitHub](https://github.com/aichatwatch/aicw-params-saver).
