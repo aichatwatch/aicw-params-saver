@@ -75,7 +75,7 @@ export function debounce<T extends (...args: unknown[]) => void>(fn: T, ms: numb
 
 /**
  * Extract root domain from hostname
- * @example getRootDomain('app.aicw.io') => 'aicw.io'
+ * @example getRootDomain('app.aichatwatch.com') => 'aichatwatch.com'
  * @example getRootDomain('sub.example.co.uk') => 'example.co.uk'
  */
 export function getRootDomain(hostname: string): string {
@@ -99,6 +99,6 @@ export function getRootDomain(hostname: string): string {
     return parts.slice(-3).join('.');
   }
 
-  // Standard: last 2 parts (e.g., aicw.io, example.com)
+  // Standard: last 2 parts (e.g., aichatwatch.com, example.com)
   return parts.slice(-2).join('.');
 }

@@ -141,13 +141,13 @@ describe('debounce', () => {
 
 describe('getRootDomain', () => {
   it('extracts root from subdomains', () => {
-    expect(getRootDomain('app.aicw.io')).toBe('aicw.io');
+    expect(getRootDomain('app.aichatwatch.com')).toBe('aichatwatch.com');
     expect(getRootDomain('sub.example.com')).toBe('example.com');
     expect(getRootDomain('deep.sub.example.com')).toBe('example.com');
   });
 
   it('returns root domain as-is', () => {
-    expect(getRootDomain('aicw.io')).toBe('aicw.io');
+    expect(getRootDomain('aichatwatch.com')).toBe('aichatwatch.com');
     expect(getRootDomain('example.com')).toBe('example.com');
   });
 
