@@ -337,7 +337,7 @@ function debounce(fn, ms) {
 }
 /**
  * Extract root domain from hostname
- * @example getRootDomain('app.aicw.io') => 'aicw.io'
+ * @example getRootDomain('app.aichatwatch.com') => 'aichatwatch.com'
  * @example getRootDomain('sub.example.co.uk') => 'example.co.uk'
  */
 function getRootDomain(hostname) {
@@ -356,7 +356,7 @@ function getRootDomain(hostname) {
     if (knownDoubleTlds.includes(lastTwo) && parts.length > 2) {
         return parts.slice(-3).join('.');
     }
-    // Standard: last 2 parts (e.g., aicw.io, example.com)
+    // Standard: last 2 parts (e.g., aichatwatch.com, example.com)
     return parts.slice(-2).join('.');
 }
 
